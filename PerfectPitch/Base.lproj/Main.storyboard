@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PerfectPitch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PerfectPitch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.96111413960000003" blue="0.93452713330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xR6-AR-Mqm" firstAttribute="centerX" secondItem="tYK-JB-LJs" secondAttribute="centerX" id="3M8-DX-qG3"/>
                             <constraint firstItem="xR6-AR-Mqm" firstAttribute="top" secondItem="tYK-JB-LJs" secondAttribute="bottom" constant="19" id="CcZ-oR-0JH"/>
@@ -62,17 +62,17 @@
                         <outlet property="progress" destination="tYK-JB-LJs" id="6vt-Vc-ouV"/>
                         <outlet property="recordButton" destination="oqV-oD-lJc" id="zta-sr-czL"/>
                         <outlet property="stopRecordingButton" destination="xR6-AR-Mqm" id="VbB-18-Kih"/>
-                        <segue destination="GVD-ur-Us5" kind="show" id="8zf-A3-cqj"/>
+                        <segue destination="GVD-ur-Us5" kind="show" identifier="stopRecording" id="2xa-aS-g8W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="gfb-5D-050">
             <objects>
-                <viewController id="GVD-ur-Us5" sceneMemberID="viewController">
+                <viewController id="GVD-ur-Us5" customClass="PlaySoundsViewController" customModule="PerfectPitch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5sY-Ye-N5u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Fast"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KN-Ot-Q03">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KN-Ot-Q03">
                                 <rect key="frame" x="163" y="576" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="GtA-CL-RCg"/>
@@ -120,6 +120,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qjg-BW-gN9" firstAttribute="bottom" secondItem="4KN-Ot-Q03" secondAttribute="bottom" constant="27" id="J5R-bG-tJq"/>
+                            <constraint firstItem="4KN-Ot-Q03" firstAttribute="leading" secondItem="Qjg-BW-gN9" secondAttribute="leading" constant="163" id="K9N-ld-uWN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Qjg-BW-gN9"/>
                     </view>
                 </viewController>
