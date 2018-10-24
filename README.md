@@ -1,4 +1,4 @@
-# Perfect-Pitch
+# Perfect-Pitch [COMPLETED]
 Record a voice and play with it.
 
 This is the first project of Udacity Nano Degree in iOS.
